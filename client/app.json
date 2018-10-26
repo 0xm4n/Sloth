@@ -5,6 +5,7 @@
     "pages/order_confirm/order_confirm",
     "pages/address_select/address_select",
     "pages/address_add/address_add",
+    "pages/address_alter/address_alter",
     "pages/order_remark/order_remark",
     "pages/order_list/order_list",
     "pages/breakfastTrolley/breakfastTrolley",

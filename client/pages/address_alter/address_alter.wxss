@@ -52,7 +52,7 @@ button{
 
 }
 
-.button_new_address{
+.button_save_address{
   background-color:#FD6460;
   position: fixed;
   bottom: 0;

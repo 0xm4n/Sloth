@@ -12,8 +12,8 @@
       <view class="text">地址</view>
       <textarea name="addressarea" placeholder="学校/校区/宿舍号" class="addrinput" />
     </view>
-    <view class='button_new_address'>
-      <button formType='submit'>新增地址</button>
+    <view class='button_save_address'>
+      <button formType='submit'>保存地址</button>
     </view>
   </form>
 </view>
