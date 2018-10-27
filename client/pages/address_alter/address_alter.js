@@ -11,6 +11,7 @@ Page({
   },
 
   onLoad: function (options) {
+    console.log("The new userId is: ", options.userId);
     var that = this;
     var flag = false;
     flag = options.flag;
@@ -57,7 +58,7 @@ Page({
       })
 
       wx.redirectTo({
-        url: '../address_select/address_select'
+        url: '../address_select/address_select?userId=' + that.userId
       })
     }
 

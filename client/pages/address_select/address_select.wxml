@@ -10,7 +10,9 @@
           </view>
         </view>
         <view>
-          <image class='icon_change' src='./writing.png'></image>
+          <navigator url='../address_alter/address_alter?userId={{userId}}'>
+            <image class='icon_change' src='./writing.png'></image>
+          </navigator>
         </view>
       </view>
 
