@@ -8,7 +8,8 @@ Page({
     customer:{},
     selected:0,
     orders:[],
-    cost:0
+    cost:0,
+    cost_tran:0
   },
 
   /**
@@ -46,6 +47,14 @@ Page({
       })
     },
   });
+  wx.getStorage({
+    key: 'cost_tran',
+    success: function(res) {
+      that.setData({
+        cost_tran:res.data
+      })
+    },
+  });  
   },
 
   settleOrder:function(e){
@@ -63,9 +72,16 @@ Page({
         cost: that.data.cost
       }
     })
-    // wx.navigateTo({
-    //   url: '../order_list/order_list'
-    // })
+    wx.showToast({  
+      title: '成功',  
+      icon: 'success',  
+      duration: 2000  
+    })  
+    setTimeout(function (e) {
+      wx.navigateTo({
+        url: '../order_list/order_list'
+     })
+     }, 2000)
   },
 
   /**

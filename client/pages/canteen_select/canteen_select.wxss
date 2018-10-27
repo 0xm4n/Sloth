@@ -55,8 +55,6 @@
   display:flex;
 }
 
-
-
 .canteen{
   height:110%;
   width:50%;
@@ -71,5 +69,4 @@
   width:100%;
   display: flex;
   margin-bottom: 4.9%;
-
 }

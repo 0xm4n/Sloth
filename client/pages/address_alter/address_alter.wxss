@@ -18,28 +18,29 @@
 
 .text{
     padding-top:3%;
-    width: 32%;
+    width: 30%;
     margin-left:7%;
 }
 
 .nameinput{
     font-size:80%;
     padding-left:4%;
-    padding-top:4%;
+    padding-bottom:4%;
     height: 100rpx;
+    margin: atuo
 }
 
 .phoneinput{
     font-size:80%;
     padding-left:4%;
-    padding-top:4%;
+    padding-bottom:4%;
     height: 100rpx;
 }
 
 .addrinput{
     font-size:80%;
     padding-left:4%;
-    padding-top:4%;
+    padding-bottom:4%;
     height: 100rpx;
 }
 
@@ -49,12 +50,6 @@ button{
     text-align: center;
     border: 0;
     height: 8%;
-
-}
-
-.button_save_address{
-  background-color:#FD6460;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    position: relative;
+    top: 10%;
 }

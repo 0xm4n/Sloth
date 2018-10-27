@@ -1,28 +1,25 @@
 <view class="container">
-  <navigator url='../address_select/address_select?userId={{customer.cust_id}}' class="customer">
-    <view class="default_address" style="flex-direction:row;">
+  <view  class="customer">
+    <navigator url='../address_select/address_select?userId={{customer.cust_id}}' class="default_address" style="flex-direction:row;">
       <image class='addr_icon' src='./maps-and-flags.png'></image>
       <view class='contact_info' style="flex-direction:column;">
         <view class="cust_addr">
-          华南理工大学大学城校区学生公寓C10
-          <!--{{customer.cust_addr[selected]}}-->
+          {{customer.cust_addr[selected]}}
         </view>
         <view class="cust_name_tel">
-          唐 先生 15521050226
-          <!--{{customer.cust_name}}{{customer.cust_phone}}-->
+          {{customer.cust_name}} {{customer.cust_phone}}
         </view>
       </view>
       <image class='arrow_icon' src='./right-arrow.png'></image>
-    </view>
-
+    </navigator>
     <view class="delever_time" style="flex-direction:row;">
       <image class='time_icon' src='./clock.png'></image>
       <view class='deliver_time_text1'>配送时间</view>
       <view class='deliver_time_text2'>7:30~8:00</view>
     </view>
-  </navigator>
+  </view>
 
-  <scroll-view bind:scrolltolower="lower" scroll-y="{{true}}">
+  <scroll-view bind:scrolltolower="lower" scroll-y="{{true}}" class="scroll">
 
     <block wx:for="{{orders}}">
       <view class="foods_info">
@@ -56,19 +53,19 @@
       </view>
       <view class="row_text">
         <view class='text_left'>配送费</view>
-        <view class='text_right'>¥1</view>
+        <view class='text_right'>¥{{cost_tran}}</view>
       </view>
       <view class="row_text">
-        <view class='text_right1'>小计 ¥{{cost+1}}</view>
+        <view class='text_right1'>小计 ¥{{cost+cost_tran}}</view>
       </view>
     </view>
-    <view class='remark' style="flex-direction:row;">
-      <navigator url="../order_remark/order_remark" class="remark_detail">备注</navigator>
+    <navigator url="../order_remark/order_remark"  class='remark' style="flex-direction:row;">
+      <view class="remark_detail">备注</view>
       <view class='remark_suggest' style="flex-direction:row;">
         <view class='remark_suggest_text'>口味偏好等要求</view>
         <image class='arrow_icon1' src='./right-arrow.png'></image>
       </view>
-    </view>
+    </navigator>
 
   </scroll-view>
   <view class="settlement">
