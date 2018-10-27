@@ -10,7 +10,7 @@
           </view>
         </view>
         <view>
-          <navigator url='../address_alter/address_alter?userId={{userId}}'>
+          <navigator url='../address_alter/address_alter?userId={{userId}}&cartArr={{cartArr}}'>
             <image class='icon_change' src='./writing.png'></image>
           </navigator>
         </view>
@@ -19,7 +19,7 @@
     </label>
   </radio-group>
   <view class="button_new_address">
-    <navigator url='../address_add/address_add?userId={{userId}}'>新增地址</navigator>
+    <navigator url='../address_add/address_add?userId={{userId+1}}'>新增地址</navigator>
   </view>
 
 </view>

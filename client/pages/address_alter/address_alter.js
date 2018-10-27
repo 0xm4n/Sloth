@@ -3,21 +3,18 @@ Page({
     height: 20,
     focus: false,
     userId: 0,
-    cartArr: [{
-      cust_name: "",
-      cust_phone: "",
-      cust_addr: ""
-    }],
+    cartArr: [],
   },
 
   onLoad: function (options) {
-    console.log("The new userId is: ", options.userId);
+    console.log("The userId is: ", options.userId);
     var that = this;
     var flag = false;
     flag = options.flag;
     that.userId = options.userId;
     that.setData({
-      userId: options.userId
+      userId: options.userId,
+      cartArr: options.cartArr
     })
   },
 

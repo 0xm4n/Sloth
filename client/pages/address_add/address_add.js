@@ -3,10 +3,7 @@ Page({
         height: 20,
         focus: false,
         userId: 0,
-        cartArr: [{
-          cust_name: "",
-          cust_phone: "",
-          cust_addr: ""}],
+        cartArr: [],
     },
 
     onLoad: function (options) {
@@ -46,9 +43,9 @@ Page({
           data: {
             userId: that.userId,
             carArr: [{
-              cust_name: e.detail.value.namearea,
-              cust_phone: e.detail.value.phonearea,
-              cust_addr: e.detail.value.addressarea
+              name: e.detail.value.namearea,
+              phone: e.detail.value.phonearea,
+              decom: e.detail.value.addressarea
             }]
           },
           success(res){
